@@ -12,8 +12,8 @@ describe('GameSavingLoader:', () => {
         points: 2000,
       },
     };
-    expect(() => {
-      GameSavingLoader.load().then((saving) => JSON.parse(saving));
-    }).toEqual(result);
+    GameSavingLoader.load().then((saving) => {
+      expect(JSON.parse(saving)).toEqual(result);
+    });
   });
 });

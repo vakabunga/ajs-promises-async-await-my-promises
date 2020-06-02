@@ -13,3 +13,5 @@ export default class GameSavingLoader {
     });
   }
 }
+
+GameSavingLoader.load().then((saving) => JSON.parse(saving));
